@@ -3,6 +3,7 @@
 //! Contralog throws decades of logger API design straight out of the window
 //! and presents an orthogonal, composable interface that is easy to implement
 //! and easy to use, while staying away from atrocities such as global state.
+//! Related work can be found in [co-log] and the older [purescript-logging].
 //!
 //! A logger is a routine that takes input and has side-effects.
 //! There is nothing more to it.
@@ -23,6 +24,8 @@
 //! [Logger]: trait.Logger.html
 //! [map]: trait.Logger.html#method.map
 //! [filter]: trait.Logger.html#method.filter
+//! [co-log]: https://github.com/kowainik/co-log
+//! [purescript-logging]: https://github.com/rightfold/purescript-logging
 
 use std::convert::Infallible;
 use std::iter;
