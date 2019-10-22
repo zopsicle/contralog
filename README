@@ -1,0 +1,11 @@
+Composable logging with monoids and contravariant functors.
+
+If you want to use this library there are at least two ways to obtain it: you
+could depend on it with Cargo by adding contralog as a dependency in
+Cargo.toml, or you could copy the src/lib.rs file into your own project under
+a different name.
+
+When developing this library please use Nix to ensure the build is
+reproducible:
+
+    nix run -ic cargo test

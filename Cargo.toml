@@ -1,0 +1,10 @@
+[package]
+name = "contralog"
+version = "0.0.1"
+license-file = "COPYING"
+
+authors = ["Chloé Kekoa"]
+description = "Composable logging with monoids and contravariant functors."
+homepage = "https://github.com/chloekek/contralog.git"
+documentation = "https://docs.rs/contralog"
+repository = "https://github.com/chloekek/contralog.git"
