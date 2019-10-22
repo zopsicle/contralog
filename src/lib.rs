@@ -1,19 +1,22 @@
 //! Composable logging with monoids and contravariant functors.
 //!
+//! Contralog throws decades of logger API design straight out of the window
+//! and presents an orthogonal, composable interface that is easy to implement
+//! and easy to use, while staying away from atrocities such as global state.
+//!
 //! A logger is a routine that takes input and has side-effects.
+//! There is nothing more to it.
 //! Any routine that has the appropriate type will do.
 //! A logger can be seen as the opposite or dual of an infinite iterator.
-//!
-//! The core trait of this crate is [Logger].
-//! It has only a single method that must be implemented: log.
-//! To log something, pass it to this method.
-//! It is up to the logger to decide what to do with the value.
-//!
 //! Loggers are composable:
 //! given two loggers with compatible types,
 //! a new logger can be created that forwards
 //! its input to both loggers.
 //!
+//! The core trait of this crate is [Logger].
+//! It has only a single method that must be implemented: log.
+//! To log something, pass it to this method.
+//! It is up to the logger to decide what to do with the value.
 //! Loggers can also be transformed using
 //! methods such as [map] and [filter].
 //!
